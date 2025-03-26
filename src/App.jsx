@@ -45,12 +45,12 @@ export default function AssemblyEndgame() {
         </div>
       </section>
 
-      <section className="current-word">
-        {letterElements}
-      </section>
-
       <section className="language-chips">
         {languageElements}
+      </section>
+
+      <section className="word">
+        {letterElements}
       </section>
 
     </main>

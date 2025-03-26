@@ -75,6 +75,7 @@ section.game-status>h2 {
   justify-content: center;
   gap: 5px;
   max-width: 350px;
+  margin-bottom: 36px;
 }
 
 span.chip {
@@ -82,18 +83,20 @@ span.chip {
   padding: 4.5px;
 }
 
-.current-word {
+section.word {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
+  gap: 2px;
 }
 
-.letter {
-  font-size: 2rem;
-  font-weight: bold;
+section.word>span {
+  height: 40px;
+  width: 40px;
+  background-color: #323232;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 5px 10px;
-  border-bottom: 3px solid #333;
-  min-width: 40px;
-  text-align: center;
+  font-size: 1.125rem;
+  border-bottom: 1px solid #F9F4DA;
 }
