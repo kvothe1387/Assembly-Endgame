@@ -12,10 +12,11 @@ import { languages } from "./languages"
 export default function AssemblyEndgame() {
   const [currentWord, setCurrentWord] = useState("react")
   const [guessedLetters, setGuessedLetters] = useState([])
+  console.log(guessedLetters)
 
-  function handleLetterGuess(letter) {
+  function addGuessedLetter(letter) {
     if (!guessedLetters.includes(letter)) {
-      setGuessedLetters(prevGuessedLetters => [...prevGuessedLetters, letter])
+      setGuessedLetters(prevLetters => [...prevLetters, letter])
     }
   }
 
@@ -44,8 +45,9 @@ export default function AssemblyEndgame() {
   const keyboardElements = alphabet.split("").map(letter => (
     <button
       key={letter}
-      onClick={() => handleLetterGuess(letter)}
+      onClick={() => addGuessedLetter(letter)}
       disabled={guessedLetters.includes(letter)}
+      className={guessedLetters.includes(letter) ? "guessed" : ""}
     >
       {letter.toUpperCase()}
     </button>
