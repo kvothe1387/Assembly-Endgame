@@ -98,6 +98,14 @@ section.keyboard>button {
   cursor: pointer;
 }
 
+section.keyboard>button.correct {
+  background-color: #10A95B;
+}
+
+section.keyboard>button.wrong {
+  background-color: #EC5D49;
+}
+
 button.new-game {
   background-color: #11B5E5;
   border: 1px solid #D7D7D7;
@@ -108,14 +116,4 @@ button.new-game {
   display: block;
   margin-inline: auto;
   cursor: pointer;
-}
-
-.correct-guess {
-  background-color: #4caf50;
-  color: white;
-}
-
-.incorrect-guess {
-  background-color: #f44336;
-  color: white;
 }
