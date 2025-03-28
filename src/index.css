@@ -109,3 +109,13 @@ button.new-game {
   margin-inline: auto;
   cursor: pointer;
 }
+
+.correct-guess {
+  background-color: #4caf50;
+  color: white;
+}
+
+.incorrect-guess {
+  background-color: #f44336;
+  color: white;
+}

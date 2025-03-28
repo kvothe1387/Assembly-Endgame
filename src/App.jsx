@@ -15,9 +15,23 @@ export default function AssemblyEndgame() {
   console.log(guessedLetters)
 
   function addGuessedLetter(letter) {
+    // only add the letter if it hasn't already been guessed
     if (!guessedLetters.includes(letter)) {
       setGuessedLetters(prevLetters => [...prevLetters, letter])
     }
+  }
+
+  // function to check if a letter is in the current word
+  function isCorrectGuess(letter) {
+    return currentWord.includes(letter)
+  }
+
+  // function to determine keyboard button class based on guess status
+  function getButtonClass(letter) {
+    if (!guessedLetters.includes(letter)) {
+      return "" // not guessed yet
+    }
+    return isCorrectGuess(letter) ? "correct-guess" : "incorrect-guess"
   }
 
   const alphabet = "abcdefghijklmnopqrstuvwxyz"
@@ -47,7 +61,7 @@ export default function AssemblyEndgame() {
       key={letter}
       onClick={() => addGuessedLetter(letter)}
       disabled={guessedLetters.includes(letter)}
-      className={guessedLetters.includes(letter) ? "guessed" : ""}
+      className={getButtonClass(letter)}
     >
       {letter.toUpperCase()}
     </button>
