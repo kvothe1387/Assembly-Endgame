@@ -10,9 +10,9 @@ export default function AssemblyEndgame() {
 
   function addGuessedLetter(letter) {
     setGuessedLetters(prevLetters =>
-      prevLetters.includes(letter) ?
-        prevLetters :
-        [...prevLetters, letter]
+      prevLetters.includes(letter)
+        ? prevLetters
+        : [...prevLetters, letter]
     )
   }
 
@@ -33,7 +33,11 @@ export default function AssemblyEndgame() {
   })
 
   const letterElements = currentWord.split("").map((letter, index) => (
-    <span key={index}>{letter.toUpperCase()}</span>
+    <span
+      key={index}
+    >
+      {guessedLetters.includes(letter) ? letter.toUpperCase() : " "}
+    </span>
   ))
 
   const keyboardElements = alphabet.split("").map(letter => {
