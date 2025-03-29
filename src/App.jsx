@@ -3,6 +3,7 @@ import { clsx } from "clsx"
 import { languages } from "./languages"
 
 export default function AssemblyEndgame() {
+  // State values
   const [currentWord, setCurrentWord] = useState("react")
   const [guessedLetters, setGuessedLetters] = useState([])
 
@@ -10,6 +11,7 @@ export default function AssemblyEndgame() {
   const wrongGuessCount = guessedLetters.filter(letter => !currentWord.includes(letter)).length
   console.log("Wrong guesses:", wrongGuessCount)
 
+  // Static values
   const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
   function addGuessedLetter(letter) {
@@ -20,14 +22,16 @@ export default function AssemblyEndgame() {
     )
   }
 
-  const languageElements = languages.map(lang => {
+  const languageElements = languages.map((lang, index) => {
+    const isLost = index < wrongGuessCount
     const styles = {
       backgroundColor: lang.backgroundColor,
       color: lang.color
     }
+    const className = clsx("chip", isLost && "lost")
     return (
       <span
-        className="chip"
+        className={className}
         style={styles}
         key={lang.name}
       >
