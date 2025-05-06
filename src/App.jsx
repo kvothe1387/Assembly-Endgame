@@ -2,6 +2,7 @@ import { useState } from "react"
 import { clsx } from "clsx"
 import { languages } from "./languages"
 import { getFarewellText, getRandomWord } from "./utils"
+import "./index.css"
 
 export default function AssemblyEndgame() {
   // State values
