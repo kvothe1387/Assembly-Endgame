@@ -4,7 +4,7 @@ import { languages } from "./languages"
 import { getFarewellText, getRandomWord } from "./utils"
 import "./index.css"
 
-export default function AssemblyEndgame() {
+export default function App() {
   // State values
   const [currentWord, setCurrentWord] = useState(() => getRandomWord())
   const [guessedLetters, setGuessedLetters] = useState([])
