@@ -2,7 +2,6 @@ import { useState } from "react"
 import { clsx } from "clsx"
 import { languages } from "./languages"
 import { getFarewellText, getRandomWord } from "./utils"
-import Confetti from "react-confetti"
 
 export default function AssemblyEndgame() {
   // State values
@@ -101,7 +100,7 @@ export default function AssemblyEndgame() {
         <p className="farewell-message">{getFarewellText(languages[wrongGuessCount - 1].name)}</p>)
     }
 
-    if (isGameWon && <Confetti />) {
+    if (isGameWon) {
       return (
         <>
           <h2>You win!</h2>
@@ -122,13 +121,7 @@ export default function AssemblyEndgame() {
 
   return (
     <main>
-      {
-        isGameWon &&
-        <Confetti
-          recycle={false}
-          numberOfPieces={1000}
-        />
-      }
+
       <header>
         <h1>Assembly: Endgame</h1>
         <p>Guess the word within 8 attempts to keep the
