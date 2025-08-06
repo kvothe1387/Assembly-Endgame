@@ -109,7 +109,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👏 Acknowledgments
 
-- Created by [Your Name]
+- Created by David McCullough
 - Word list curated from common English words
 - Programming language selection inspired by popular languages
 - Special thanks to contributors and testers
