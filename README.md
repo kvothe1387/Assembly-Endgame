@@ -158,14 +158,6 @@ This project is deployed on Netlify. To deploy your own version:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👏 Acknowledgments
-
-- Created by [David McCullough](https://github.com/yourusername)
-- Word list curated from common English words (Basic English vocabulary)
-- Programming language selection inspired by popular web development technologies
-- Game concept inspired by classic word-guessing games
-- Special thanks to the React and Vite communities
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/assembly-endgame/issues).
